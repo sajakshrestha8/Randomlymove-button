@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I love you</title>
+</head>
+<body>
+    <div class="container">
+        <div><label class="container-info"><b>Will You Marry Me??</b></label ></div>
+        <img src="vecteezy_bear-cartoon-element_24077536.png" alt="panda" class="panda">
+        <div class="buttons"><button class="yes" id="answer"  onclick="yes()">Yes</button><button class="no" id="move">No</button></div>
+    </div>
+
+    <style>
+        .container{
+            height: 20rem;
+            width: 80%;
+            background-color: pink;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10rem;
+            border-radius: 20px;
+            padding-top: 6rem;
+        }
+
+        .container-info{
+            font-family: Poppins;
+            margin-left: 25rem;
+            font-size: 40px;
+        }
+
+        .panda{
+            height: 5rem;
+            margin-left: 34rem;
+        }
+
+        .yes{
+            border-radius: 20px;
+            height: 2rem;
+            width: 5rem;
+            margin-left: 29rem;
+            transition: 300ms ease;
+        }
+
+        .no{
+            border-radius: 20px;
+            height: 2rem;
+            width: 5rem;
+            margin-left: 3rem;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .no:hover{
+            background-color: rgb(255, 130, 151);
+            box-shadow: 0 5px 5px 0 rgb(78, 77, 77);
+        }
+
+        .yes:hover{
+            background-color: rgb(255, 130, 151);
+            box-shadow: 0 5px 5px 0 rgb(78, 77, 77);
+        }
+        
+        .buttons{
+            padding: 20px;
+        }
+    </style>
+
+    <script>
+        var a = document.getElementById('move');
+
+
+        function yes(){
+            var b = document.getElementById('answer');
+
+            b.addEventListener('click', () =>{
+                b.innerHTML = "I love you Babe";
+            })
+        }
+
+
+        a.addEventListener('click', change);
+
+        function change(){
+            var i = Math.floor(Math.random()*500)+1;
+            var j = Math.floor(Math.random()*500)+1;
+            a.style.left = i+"px";
+            a.style.top = j+"px";
+        }
+    </script>
+</body>
+</html>
